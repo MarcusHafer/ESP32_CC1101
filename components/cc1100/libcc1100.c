@@ -1547,7 +1547,7 @@ float get_temp(uint16_t wait)
     delay(50);						// wait a bit
 
     for (uint8_t i=0;i<num_samples;i++) { // sample analog temperature value
-    	adc_result += adc1_get_voltage(adc_channel);
+    	adc_result += adc1_get_raw(adc_channel);
     	delay(1);
     }
     adc_result = adc_result / num_samples;
